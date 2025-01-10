@@ -1,0 +1,10 @@
+D:\Projects\Knorr-Példa\NewsFeedApp\NewsDB\bin\Debug\NewsDB.dacpac
+D:\Projects\Knorr-Példa\NewsFeedApp\NewsDB\bin\Debug\NewsDB.dll
+D:\Projects\Knorr-Példa\NewsFeedApp\NewsDB\bin\Debug\NewsDB.pdb
+D:\Projects\Knorr-Példa\NewsFeedApp\NewsDB\obj\Debug\NewsDB.sqlproj.AssemblyReference.cache
+D:\Projects\Knorr-Példa\NewsFeedApp\NewsDB\obj\Debug\Model.xml
+D:\Projects\Knorr-Példa\NewsFeedApp\NewsDB\obj\Debug\refactor.xml
+D:\Projects\Knorr-Példa\NewsFeedApp\NewsDB\obj\Debug\postdeploy.sql
+D:\Projects\Knorr-Példa\NewsFeedApp\NewsDB\obj\Debug\predeploy.sql
+D:\Projects\Knorr-Példa\NewsFeedApp\NewsDB\obj\Debug\NewsDB.dll
+D:\Projects\Knorr-Példa\NewsFeedApp\NewsDB\obj\Debug\NewsDB.pdb
