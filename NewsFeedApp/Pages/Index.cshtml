@@ -1,11 +1,23 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "News feed";
+	ViewData["Title"] = "News feed";
 }
 
-<div class="text-center">
-    <h1 class="display-4">News Feed</h1>
-    <h5 class="display-4">World wide</h5>
-    @* <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
-</div>
+@foreach (var news in Model.News)
+{
+	<div class="card">
+		<div class="card-group">
+			<img class="card-img-top" />
+			<p class="card-title">
+				@news.Title
+			</p><br />
+			<p class="card-body">
+				@news.Description
+			</p><br />
+			<p class="card-body">
+				@news.PubDate
+			</p>
+		</div>
+	</div>
+}

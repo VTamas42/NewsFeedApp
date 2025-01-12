@@ -8,8 +8,9 @@ namespace NewsFeedApp.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         public IConfiguration _configuration;
-        private readonly NewsDBContext _context;
+        private readonly NewsDBContext _context = new NewsDBContext();
         private NewsCollector newsCollector = new NewsCollector();
+        public List<News> News { get; set; } = new List<News>();
 
         public IndexModel(ILogger<IndexModel> logger, IConfiguration configuration, NewsDBContext newsDBContext)
         {
@@ -21,8 +22,9 @@ namespace NewsFeedApp.Pages
         //Process data from news table and generate news pages
         public void OnGet()
         {
-            string test = _configuration.GetConnectionString("DefaultConnection");
             newsCollector.GetLatestNews();
+            
+                News = _context.News.OrderBy(e => e.PubDate).ToList();
             
         }
     }
