@@ -18,19 +18,16 @@ namespace NewsFeedApp.Models
         public int refreshInterval;
         public List<News> freshNews = new List<News>();
         private string bbc = "https://feeds.bbci.co.uk/news/world/rss.xml";
-        private string euronews = "https://www.euronews.com/rss?format=mrss&level=theme&name=news";
-        private string politico = "https://www.politico.com/rss/Top10Blogs.xml";
-        private string theguardian = "https://www.theguardian.com/us-news/rss";
+        private string nyt = "https://rss.nytimes.com/services/xml/rss/nyt/World.xml";
+        private string myteu = "https://rss.nytimes.com/services/xml/rss/nyt/Europe.xml";
         private string skynews = "https://feeds.skynews.com/feeds/rss/world.xml";
 
         public void GetLatestNews()
         {
             List<string> newsSourceList = new List<string>();
             newsSourceList.Add(bbc);
-            //hibás source?
-            //newsSourceList.Add(euronews);
-            //newsSourceList.Add(politico);
-            newsSourceList.Add(theguardian);
+            newsSourceList.Add(nyt);
+            newsSourceList.Add(myteu);
             newsSourceList.Add(skynews);
 
             this.freshNews.Clear();
@@ -63,6 +60,8 @@ namespace NewsFeedApp.Models
 
                         using (var context = new NewsDBContext())
                         {
+                            if(context.News.Any(x => x.GUID == news.GUID)) { continue; }
+
                             context.News.Add(news);
                             context.SaveChanges();
                         }
