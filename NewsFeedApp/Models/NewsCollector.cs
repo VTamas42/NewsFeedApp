@@ -55,9 +55,9 @@ namespace NewsFeedApp.Models
                         news.ArcticleLink = node.Element("link").Value;
                         news.GUID = node.Element("guid").Value;
                         //date convert javítani
-                        //news.PubDate = node.Element("pubDate").Value;
+                        news.PubDate = DateTime.Parse(node.Element("pubDate").Value);
                         //hiányzó média content
-                        //news.MediaContent = node.Element("media").Value;
+                        //news.MediaContent = node.Element("media:thumbnail").Attribute("xmlns").Value;
                         freshNews.Add(news);
                     }
                     //csatlakozási hiba - nem kapcsolódik a felhasználó
@@ -79,7 +79,7 @@ namespace NewsFeedApp.Models
                 }
             }
 
-            //Console.WriteLine();
+            Console.WriteLine();
 
         }
     }
