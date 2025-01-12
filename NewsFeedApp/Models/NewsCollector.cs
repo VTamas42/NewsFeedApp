@@ -16,7 +16,6 @@ namespace NewsFeedApp.Models
     public class NewsCollector
     {
         public int refreshInterval;
-        public List<News> freshNews = new List<News>();
         private string bbc = "https://feeds.bbci.co.uk/news/world/rss.xml";
         private string nyt = "https://rss.nytimes.com/services/xml/rss/nyt/World.xml";
         private string myteu = "https://rss.nytimes.com/services/xml/rss/nyt/Europe.xml";
@@ -30,17 +29,14 @@ namespace NewsFeedApp.Models
             newsSourceList.Add(myteu);
             newsSourceList.Add(skynews);
 
-            this.freshNews.Clear();
-
             foreach (var source in newsSourceList)
             {
                 try
                 {
                     WebClient wc = new WebClient();
+                    XDocument XDoc = new XDocument();
                     byte[] xmlsource = wc.DownloadData(source);
                     string encodedSource = Encoding.ASCII.GetString(xmlsource);
-
-                    XDocument XDoc = new XDocument();
                     XDoc = XDocument.Parse(encodedSource);
                     IEnumerable<XElement> xElementList = XDoc.Descendants("item");
 
@@ -52,20 +48,31 @@ namespace NewsFeedApp.Models
                         news.ArcticleLink = node.Element("link").Value;
                         news.GUID = node.Element("guid").Value;
                         news.PubDate = DateTime.Parse(node.Element("pubDate").Value);
-                        //hiányzó média content
-                        //XNamespace ns = "media:";
-                        //news.MediaContent = node.Descendants(ns + "thumbnail").FirstOrDefault().Value;
-                        freshNews.Add(news);
-                        // ", \"" + news.PubDate + "\", )";
+
+                        if (node.Elements().FirstOrDefault(e => e.Name.LocalName == "thumbnail") != null)
+                        {
+                            news.MediaContent = node.Elements().FirstOrDefault(e => e.Name.LocalName == "thumbnail").Attribute("url").Value.ToString();
+                        }
+                        else if (node.Elements().FirstOrDefault(e => e.Name.LocalName == "content") != null)
+                        {
+                            news.MediaContent = node.Elements().FirstOrDefault(e => e.Name.LocalName == "content").Attribute("url").Value.ToString();
+                        }
+                        else
+                        {
+                            news.MediaContent = XDoc.Descendants()
+                                .Where(element => element.Name.LocalName == "url" && element.Parent != null && element.Parent.Name.LocalName == "image")
+                                .FirstOrDefault().Value.ToString();
+                        }
 
                         using (var context = new NewsDBContext())
                         {
-                            if(context.News.Any(x => x.GUID == news.GUID)) { continue; }
+                            if (context.News.Any(x => x.GUID == news.GUID)) { continue; }
 
                             context.News.Add(news);
                             context.SaveChanges();
                         }
                     }
+
                 }
                 catch (System.Xml.XmlException e)
                 {
