@@ -4,20 +4,27 @@
 	ViewData["Title"] = "News feed";
 }
 
-@foreach (var news in Model.News)
-{
-	<div class="card">
-		<div class="card-group">
-			<img class="card-img-top" />
-			<p class="card-title">
-				@news.Title
-			</p><br />
-			<p class="card-body">
-				@news.Description
-			</p><br />
-			<p class="card-body">
-				@news.PubDate
-			</p>
-		</div>
+<div class="container">
+	<div class="">
+		<div class="newsWrapper row row-cols-3" style="margin: 0px auto;">
+		@foreach (var news in Model.News)
+		{
+			<div class="card col" style="padding: 10px;margin: 5px;width: 25rem">
+				<div class="card-group">
+					<img src="@news.MediaContent" class="card-img-top" alt="news-thumbnail" />
+					<p class="card-title">
+						@news.Title
+					</p><br />
+					<p class="card-text">
+						@news.Description
+					</p><br />
+					<p class="card-body">
+						@news.PubDate
+					</p>
+				</div>
+			</div>
+		
+		}
 	</div>
-}
+	</div>
+</div>
