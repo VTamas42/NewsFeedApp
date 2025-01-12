@@ -54,23 +54,19 @@ namespace NewsFeedApp.Models
                         news.Description = node.Element("description").Value;
                         news.ArcticleLink = node.Element("link").Value;
                         news.GUID = node.Element("guid").Value;
-                        //date convert javítani
                         news.PubDate = DateTime.Parse(node.Element("pubDate").Value);
                         //hiányzó média content
-                        //news.MediaContent = node.Element("media:thumbnail").Attribute("xmlns").Value;
+                        //XNamespace ns = "media:";
+                        //news.MediaContent = node.Descendants(ns + "thumbnail").FirstOrDefault().Value;
                         freshNews.Add(news);
-                    }
-                    //csatlakozási hiba - nem kapcsolódik a felhasználó
-                    //using (SqlConnection openCon = new SqlConnection("Server=(localdb)\\mssqllocaldb;Database=NewsDB;integrated Security=SSPI; Trusted_Connection=True;"))
-                    //{
-                    //    string insertCommand = "INSERT into News (Title) VALUES (test)";
+                        // ", \"" + news.PubDate + "\", )";
 
-                    //    using (SqlCommand queryInsertCommand = new SqlCommand(insertCommand, openCon)) {
-                    //        queryInsertCommand.Connection = openCon;
-                    //        openCon.Open();
-                    //        queryInsertCommand.ExecuteNonQuery();
-                    //    }
-                    //}
+                        using (var context = new NewsDBContext())
+                        {
+                            context.News.Add(news);
+                            context.SaveChanges();
+                        }
+                    }
                 }
                 catch (System.Xml.XmlException e)
                 {
