@@ -5,27 +5,28 @@
 }
 
 <div class="container">
-	<div>
-		<div class="newsWrapper row row-cols-3" style="margin: 0px auto;">
-			@foreach (var news in Model.News)
-			{
-				<div class="card col p-3" style="padding: 10px;margin: 5px;width: 25rem">
-						<img src="@news.MediaContent" class="card-img-top img-thumbnail" alt="news-thumbnail" onclick="OpenNews(@news.ArcticleLink)" />
-					<div class="card-group p-3 ">
-						<p class="card-title fw-bold fs-5 mb-0"> 
-							@news.Title
-						</p><br />
-						<p class="card-body fst-italic small p-0" style="border-bottom: dotted 1px">
-							@news.PubDate
-						</p>
-						<p class="card-text mt-1" style="text-align: justify;">
-							@news.Description
-						</p><br />
-					</div>
+	<div class="input-group mb-3">
+		<input class="form-control" type="text" />
+		<button class="btn btn-outline-secondary" formmethod="post">Keresés</button>
+	</div>
+	<div class="newsWrapper row row-cols-3" style="margin: 0px auto;">
+		@foreach (var news in Model.News)
+		{
+			<div class="card col p-3" style="padding: 10px;margin: 5px;width: 25rem">
+				<img src="@news.MediaContent" class="card-img-top img-thumbnail" alt="news-thumbnail" onclick="OpenNews(@news.ArcticleLink)" />
+				<div class="card-group p-3 ">
+					<p class="card-title fw-bold fs-5 mb-0">
+						@news.Title
+					</p><br />
+					<p class="card-body fst-italic small p-0" style="border-bottom: dotted 1px">
+						@news.PubDate
+					</p>
+					<p class="card-text mt-1" style="text-align: justify;">
+						@news.Description
+					</p><br />
 				</div>
-
-			}
-		</div>
+			</div>
+		}
 	</div>
 </div>
 
@@ -37,13 +38,13 @@
 </script>
 
 <style>
-	body{
+	body {
 		background-color: antiquewhite;
 		font-family: Arial, Helvetica, sans-serif;
 	}
-	.card{
+
+	.card {
 		box-shadow: 3px 1px 4px grey;
 	}
-
 
 </style>
