@@ -1,4 +1,13 @@
 ﻿@page
+@using NewsFeedApp.Models
 @model NewsFeedApp.Pages.NewsModel
 @{
+	Pager pager = new Pager();
+	int pageNo = 0;
+
+	if (ViewBag.Pager != null)
+	{
+		pager = ViewBag.Pager;
+		pageNo = pager.CurrentPage;
+	}
 }

@@ -43,8 +43,8 @@ namespace NewsFeedApp.Models
                     foreach (XElement node in xElementList)
                     {
                         News news = new News();
-                        news.Title = node.Element("title").Value;
-                        news.Description = node.Element("description").Value;
+                        news.Title = @"" +  node.Element("title").Value.ToString();
+                        news.Description = @"" + node.Element("description").Value.ToString();
                         news.ArcticleLink = node.Element("link").Value;
                         news.GUID = node.Element("guid").Value;
                         news.PubDate = DateTime.Parse(node.Element("pubDate").Value);
