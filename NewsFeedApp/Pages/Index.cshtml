@@ -2,10 +2,8 @@
 @using NewsFeedApp.Models
 @model IndexModel
 @{
-
 	ViewData["Title"] = "News feed";
 	var pager = Model.Pager;
-
 	int pageNo = 0;
 
 	if (ViewBag.Pager != null)
@@ -18,7 +16,6 @@
 	@if (pager.TotalPages > 0)
 	{
 		<ul class="pagination justify-content-center" style="width: 100%;">
-
 			@if (pager.CurrentPage > 1)
 			{
 				<li class="page-item">
@@ -36,7 +33,6 @@
 			{
 				<li class="page-item @(pge == pager.CurrentPage ? "active" : "")">
 					<a class="page-link" asp-controller="news" asp-action="Index" asp-route-pg="@pge">@pge</a>
-
 				</li>
 			}
 

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using System.Text;
 using System.Xml.Linq;
-using Microsoft.EntityFrameworkCore;
 
 namespace NewsFeedApp.Models
 {
@@ -39,7 +37,7 @@ namespace NewsFeedApp.Models
                     foreach (XElement node in xElementList)
                     {
                         News news = new News();
-                        news.Title = @"" +  node.Element("title")?.Value.ToString();
+                        news.Title = @"" + node.Element("title")?.Value.ToString();
                         news.Description = @"" + node.Element("description")?.Value.ToString();
                         news.ArcticleLink = node.Element("link")?.Value;
                         news.GUID = node.Element("guid")?.Value;

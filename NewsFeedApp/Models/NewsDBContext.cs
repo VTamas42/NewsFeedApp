@@ -8,7 +8,7 @@ namespace NewsFeedApp.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.UseSqlServer(connectionString);
         }
 
         public DbSet<NewsFeedApp.Models.News> News { get; set; } = default!;
