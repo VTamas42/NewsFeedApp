@@ -22,10 +22,10 @@
 			@if (pager.CurrentPage > 1)
 			{
 				<li class="page-item">
-					<a class=" page-link" asp-asp-controller="News" asp-action="Index" asp-route-pg="1">First</a>
+					<a class=" page-link" asp-asp-controller="news" asp-action="Index" asp-route-pg="1">First</a>
 				</li>
 				<li class="page-item">
-					<a class=" page-link" asp-asp-controller="News" asp-action="Index" asp-route-pg="@(pager.CurrentPage -1)">
+					<a class=" page-link" asp-asp-controller="news" asp-action="Index" asp-route-pg="@(pager.CurrentPage -1)">
 						<span aria-hidden="true">&laquo;</span>
 						<span class="sr-only">Previous</span>
 					</a>
@@ -35,7 +35,7 @@
 			@for (int pge = pager.StartPage; pge < pager.EndPage; pge++)
 			{
 				<li class="page-item @(pge == pager.CurrentPage ? "active" : "")">
-					<a class="page-link" asp-controller="News" asp-action="Index" asp-route-pg="@pge">@pge</a>
+					<a class="page-link" asp-controller="news" asp-action="Index" asp-route-pg="@pge">@pge</a>
 
 				</li>
 			}
@@ -43,13 +43,13 @@
 			@if (pager.CurrentPage < pager.TotalPages)
 			{
 				<li class="page-item">
-					<a class=" page-link" asp-asp-controller="News" asp-action="Index" asp-route-pg="@(pager.CurrentPage+1)">
+					<a class=" page-link" asp-asp-controller="news" asp-action="Index" asp-route-pg="@(pager.CurrentPage+1)">
 						<span aria-hidden="true">&raquo;</span>
 						<span class="sr-only">Next</span>
 					</a>
 				</li>
 				<li class="page-item">
-					<a class=" page-link" asp-asp-controller="News" asp-action="Index" asp-route-pg="@(pager.TotalPages)">Last</a>
+					<a class=" page-link" asp-asp-controller="news" asp-action="Index" asp-route-pg="@(pager.TotalPages)">Last</a>
 				</li>
 			}
 		</ul>
@@ -66,7 +66,7 @@
 		</form>
 	</div>
 	<div class="newsWrapper row row-cols-3" style="margin: 0px auto;">
-		@foreach (var news in Model.News)
+		@foreach (var news in Model.news)
 		{
 			<div class="card col p-3" style="padding: 10px;margin: 5px;width: 25.2rem">
 				<img src="@news.MediaContent" class="card-img-top img-thumbnail" alt="news-thumbnail" onclick="OpenNews(@news.ArcticleLink)" />
@@ -94,10 +94,10 @@
 			@if (pager.CurrentPage > 1)
 			{
 				<li class="page-item">
-					<a class=" page-link" asp-asp-controller="News" asp-action="Index" asp-route-pg="1">First</a>
+					<a class=" page-link" asp-asp-controller="news" asp-action="Index" asp-route-pg="1">First</a>
 				</li>
 				<li class="page-item">
-					<a class=" page-link" asp-asp-controller="News" asp-action="Index" asp-route-pg="@(pager.CurrentPage -1)">
+					<a class=" page-link" asp-asp-controller="news" asp-action="Index" asp-route-pg="@(pager.CurrentPage -1)">
 						<span aria-hidden="true">&laquo;</span>
 						<span class="sr-only">Previous</span>
 					</a>
@@ -107,7 +107,7 @@
 			@for (int pge = pager.StartPage; pge < pager.EndPage; pge++)
 			{
 				<li class="page-item @(pge == pager.CurrentPage ? "active" : "")">
-					<a class="page-link" asp-controller="News" asp-action="Index" asp-route-pg="@pge">@pge</a>
+					<a class="page-link" asp-controller="news" asp-action="Index" asp-route-pg="@pge">@pge</a>
 
 				</li>
 			}
@@ -115,13 +115,13 @@
 			@if (pager.CurrentPage < pager.TotalPages)
 			{
 				<li class="page-item">
-					<a class=" page-link" asp-asp-controller="News" asp-action="Index" asp-route-pg="@(pager.CurrentPage+1)">
+					<a class=" page-link" asp-asp-controller="news" asp-action="Index" asp-route-pg="@(pager.CurrentPage+1)">
 						<span aria-hidden="true">&raquo;</span>
 						<span class="sr-only">Next</span>
 					</a>
 				</li>
 				<li class="page-item">
-					<a class=" page-link" asp-asp-controller="News" asp-action="Index" asp-route-pg="@(pager.TotalPages)">Last</a>
+					<a class=" page-link" asp-asp-controller="news" asp-action="Index" asp-route-pg="@(pager.TotalPages)">Last</a>
 				</li>
 			}
 		</ul>

@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|d:\\projects\\knorr-p\u00E9lda\\newsfeedapp\\newsfeedapp\\models\\newscollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|solutionrelative:newsfeedapp\\models\\newscollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|d:\\projects\\knorr-p\u00E9lda\\newsfeedapp\\newsfeedapp\\services\\newsupdateservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|solutionrelative:newsfeedapp\\services\\newsupdateservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|d:\\projects\\knorr-p\u00E9lda\\newsfeedapp\\newsfeedapp\\models\\newsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|solutionrelative:newsfeedapp\\models\\newsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|d:\\projects\\knorr-p\u00E9lda\\newsfeedapp\\newsfeedapp\\models\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|solutionrelative:newsfeedapp\\models\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|d:\\projects\\knorr-p\u00E9lda\\newsfeedapp\\newsfeedapp\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|solutionrelative:newsfeedapp\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,20 +27,12 @@
       "RelativeMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|solutionrelative:newsfeedapp\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|d:\\projects\\knorr-p\u00E9lda\\newsfeedapp\\newsfeedapp\\models\\newscollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|solutionrelative:newsfeedapp\\models\\newscollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|d:\\projects\\knorr-p\u00E9lda\\newsfeedapp\\newsfeedapp\\models\\newsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|solutionrelative:newsfeedapp\\models\\newsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|d:\\projects\\knorr-p\u00E9lda\\newsfeedapp\\newsfeedapp\\models\\pager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|solutionrelative:newsfeedapp\\models\\pager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|d:\\projects\\knorr-p\u00E9lda\\newsfeedapp\\newsfeedapp\\models\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|solutionrelative:newsfeedapp\\models\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|d:\\projects\\knorr-p\u00E9lda\\newsfeedapp\\newsfeedapp\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{815C0AF9-D096-4532-897D-23245976417D}|NewsFeedApp\\NewsFeedApp.csproj|solutionrelative:newsfeedapp\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +42,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "NewsUpdateService .cs",
+              "DocumentMoniker": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Services\\NewsUpdateService .cs",
+              "RelativeDocumentMoniker": "NewsFeedApp\\Services\\NewsUpdateService .cs",
+              "ToolTip": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Services\\NewsUpdateService .cs",
+              "RelativeToolTip": "NewsFeedApp\\Services\\NewsUpdateService .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T21:37:20.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "NewsFeedApp\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "NewsFeedApp\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwAMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T20:35:18.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "NewsDBContext.cs",
               "DocumentMoniker": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Models\\NewsDBContext.cs",
               "RelativeDocumentMoniker": "NewsFeedApp\\Models\\NewsDBContext.cs",
               "ToolTip": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Models\\NewsDBContext.cs",
               "RelativeToolTip": "NewsFeedApp\\Models\\NewsDBContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T21:36:35.742Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "News.cs",
               "DocumentMoniker": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Models\\News.cs",
               "RelativeDocumentMoniker": "NewsFeedApp\\Models\\News.cs",
               "ToolTip": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Models\\News.cs",
               "RelativeToolTip": "NewsFeedApp\\Models\\News.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T21:36:32.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "NewsCollector.cs",
               "DocumentMoniker": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Models\\NewsCollector.cs",
               "RelativeDocumentMoniker": "NewsFeedApp\\Models\\NewsCollector.cs",
               "ToolTip": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Models\\NewsCollector.cs",
               "RelativeToolTip": "NewsFeedApp\\Models\\NewsCollector.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAgwFIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwCwAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T19:52:32.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Pager.cs",
               "DocumentMoniker": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Models\\Pager.cs",
               "RelativeDocumentMoniker": "NewsFeedApp\\Models\\Pager.cs",
               "ToolTip": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Models\\Pager.cs",
               "RelativeToolTip": "NewsFeedApp\\Models\\Pager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T19:38:06.072Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "NewsFeedApp\\Pages\\Index.cshtml.cs",
               "ToolTip": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Pages\\Index.cshtml.cs",
               "RelativeToolTip": "NewsFeedApp\\Pages\\Index.cshtml.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAiwBcAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T19:37:31.08Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "NewsFeedApp\\Pages\\Index.cshtml",
               "ToolTip": "D:\\Projects\\Knorr-P\u00E9lda\\NewsFeedApp\\NewsFeedApp\\Pages\\Index.cshtml",
               "RelativeToolTip": "NewsFeedApp\\Pages\\Index.cshtml",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAHUAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAnwJcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-14T19:37:29.908Z",
               "EditorCaption": ""

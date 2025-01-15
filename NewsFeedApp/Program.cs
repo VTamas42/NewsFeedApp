@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<NewsDBContext>();
+builder.Services.AddHostedService<NewsUpdateService>();
 
 var app = builder.Build();
 

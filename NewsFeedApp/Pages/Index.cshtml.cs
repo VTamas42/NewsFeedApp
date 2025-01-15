@@ -10,7 +10,7 @@ namespace NewsFeedApp.Pages
         public Pager Pager { get; set; }
         private readonly NewsDBContext _context = new NewsDBContext();
         private NewsCollector newsCollector = new NewsCollector();
-        public List<News> News { get; set; } = new List<News>();
+        public List<News> news { get; set; } = new List<News>();
         public List<News> data { get; set; } = new List<News>();
 
         public IndexModel(NewsDBContext newsDBContext)
@@ -23,22 +23,23 @@ namespace NewsFeedApp.Pages
 
         public void OnGet(int pg = 1)
         {
+            newsCollector.GetLatestNews();
             int pageSize = 9;
 
-            News = _context.News.OrderBy(e => e.PubDate).ToList();
+            news = _context.News.OrderBy(e => e.PubDate).ToList();
             if (!searchString.IsNullOrEmpty())
             {
 
-                News = News.Where(s => s.Title.Contains(searchString)).ToList();
-                pageSize = News.Count;
+                news = news.Where(s => s.Title.Contains(searchString)).ToList();
+                pageSize = news.Count;
             }
 
-            int recsCount = News.Count;
+            int recsCount = news.Count;
 
             Pager = new Pager(recsCount, pg, pageSize);
             int recSkip = (pg - 1) * pageSize;
 
-            News = News.Skip(recSkip).Take(pageSize).ToList();
+            news = news.Skip(recSkip).Take(pageSize).ToList();
         }
     }
 }

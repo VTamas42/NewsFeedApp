@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Net;
-using System.Runtime.Serialization;
-using System.ServiceModel.Syndication;
 using System.Text;
-using System.Xml;
 using System.Xml.Linq;
-using System.Xml.Serialization;
-using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace NewsFeedApp.Models
 {
@@ -34,40 +30,39 @@ namespace NewsFeedApp.Models
                 try
                 {
                     WebClient wc = new WebClient();
-                    XDocument XDoc = new XDocument();
+                    XDocument xDoc = new XDocument();
                     byte[] xmlsource = wc.DownloadData(source);
                     string encodedSource = Encoding.ASCII.GetString(xmlsource);
-                    XDoc = XDocument.Parse(encodedSource);
-                    IEnumerable<XElement> xElementList = XDoc.Descendants("item");
+                    xDoc = XDocument.Parse(encodedSource);
+                    IEnumerable<XElement> xElementList = xDoc.Descendants("item");
 
                     foreach (XElement node in xElementList)
                     {
                         News news = new News();
-                        news.Title = @"" +  node.Element("title").Value.ToString();
-                        news.Description = @"" + node.Element("description").Value.ToString();
-                        news.ArcticleLink = node.Element("link").Value;
-                        news.GUID = node.Element("guid").Value;
+                        news.Title = @"" +  node.Element("title")?.Value.ToString();
+                        news.Description = @"" + node.Element("description")?.Value.ToString();
+                        news.ArcticleLink = node.Element("link")?.Value;
+                        news.GUID = node.Element("guid")?.Value;
                         news.PubDate = DateTime.Parse(node.Element("pubDate").Value);
 
                         if (node.Elements().FirstOrDefault(e => e.Name.LocalName == "thumbnail") != null)
                         {
-                            news.MediaContent = node.Elements().FirstOrDefault(e => e.Name.LocalName == "thumbnail").Attribute("url").Value.ToString();
+                            news.MediaContent = node.Elements()?.FirstOrDefault(e => e.Name.LocalName == "thumbnail")?.Attribute("url")?.Value.ToString();
                         }
                         else if (node.Elements().FirstOrDefault(e => e.Name.LocalName == "content") != null)
                         {
-                            news.MediaContent = node.Elements().FirstOrDefault(e => e.Name.LocalName == "content").Attribute("url").Value.ToString();
+                            news.MediaContent = node.Elements().FirstOrDefault(e => e.Name.LocalName == "content")?.Attribute("url")?.Value.ToString();
                         }
                         else
                         {
-                            news.MediaContent = XDoc.Descendants()
-                                .Where(element => element.Name.LocalName == "url" && element.Parent != null && element.Parent.Name.LocalName == "image")
-                                .FirstOrDefault().Value.ToString();
+                            news.MediaContent = xDoc.Descendants()?
+                                .Where(element => element.Name.LocalName == "url" && element.Parent != null && element.Parent.Name.LocalName == "image")?
+                                .FirstOrDefault()?.Value.ToString();
                         }
 
                         using (var context = new NewsDBContext())
                         {
                             if (context.News.Any(x => x.GUID == news.GUID)) { continue; }
-
                             context.News.Add(news);
                             context.SaveChanges();
                         }
@@ -76,7 +71,7 @@ namespace NewsFeedApp.Models
                 }
                 catch (System.Xml.XmlException e)
                 {
-                    throw;
+                    Console.WriteLine("Error occurred while saving the content: " + e.Message);
                 }
             }
         }
