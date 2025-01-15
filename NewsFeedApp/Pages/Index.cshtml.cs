@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.IdentityModel.Tokens;
 using NewsFeedApp.Models;
 
 namespace NewsFeedApp.Pages
@@ -22,9 +23,16 @@ namespace NewsFeedApp.Pages
 
         public void OnGet(int pg = 1)
         {
-            const int pageSize = 9;
+            int pageSize = 9;
 
             News = _context.News.OrderBy(e => e.PubDate).ToList();
+            if (!searchString.IsNullOrEmpty())
+            {
+
+                News = News.Where(s => s.Title.Contains(searchString)).ToList();
+                pageSize = News.Count;
+            }
+
             int recsCount = News.Count;
 
             Pager = new Pager(recsCount, pg, pageSize);

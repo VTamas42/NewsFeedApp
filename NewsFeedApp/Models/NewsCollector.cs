@@ -76,22 +76,9 @@ namespace NewsFeedApp.Models
                 }
                 catch (System.Xml.XmlException e)
                 {
-                    Console.WriteLine();
                     throw;
                 }
             }
-
-            Console.WriteLine();
-
         }
     }
-
-    /*
-     https://feeds.bbci.co.uk/news/world/rss.xml bbc
-https://www.euronews.com/rss?format=mrss&level=theme&name=news euronews
-https://www.theguardian.com/us-news/rss theguardian
-https://www.politico.com/rss/Top10Blogs.xml politico
-https://feeds.skynews.com/feeds/rss/world.xml skynews
-
-     */
 }
